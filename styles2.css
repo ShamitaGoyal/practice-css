@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font-family: 'Quicksand';
+}
+
+
+
+.main-wrapper{
+    position: relative;
+    /* background-color: aqua; */
+    width: 60vw;
+    min-width: 380px;
+    max-width: 1100px;
+    margin: 5rem auto;
+
+}
+
+
+.port-bg{
+    display: block;
+    height: auto;
+    width: 100%;
+    animation: float5 3.6s ease-in-out infinite;
+}
+
+
+
+.smiski1-img{
+    position: absolute;
+    width: 20%;
+    top: 63%;
+    left: 80%;
+    animation: float1 4s ease-in-out infinite;
+}
+
+
+.smiski2-img{
+    position: absolute;
+    width: 13%;
+    top: -5%;
+    left: 85%;
+    animation: float3 4s ease-in-out infinite;
+    rotate: 10deg;
+}
+
+
+.vinyl-img{
+    position: absolute;
+    width: 23%;
+    top: -5%;
+    left: -1%;
+    animation: spin 3.5s linear infinite;
+}
+
+
+.gup-img{
+    position: absolute;
+    width: 15%;
+    top: 20%;
+    left: 28%;
+    animation: float2 5s ease-in-out infinite;
+    rotate: 6deg;
+}
+
+
+
+@keyframes float1 {
+    50%{
+        transform: translateY(-8px) rotate(-7deg);
+    }
+}
+
+
+@keyframes float2{
+    50%{
+        transform: translateY(-8px) rotate(-4deg);
+    }
+
+}
+
+
+@keyframes float3{
+    50% {
+        transform: translateY(-8px) rotate(10deg);
+    }
+}
+
+@keyframes float5{
+    50% {
+        transform:  rotate(2deg);
+    }
+
+
+}
+
+
+@keyframes spin{
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+h3{
+    /* this is how you use a clamp:
+    - 1.2rem → minimum size
+    - 2vw → scales with viewport width
+    - 3rem → maximum size */
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2vw, 3rem);
+    text-align: center;
+    margin-top: -4rem;
+    
+}
+
+
+
+/* 
+h1 {
+    font-size: clamp(1.2rem, 2vw, 3rem);
+  }
+  👉 What this does:
+  
+  Screen Width	Font Size Result
+  Small screens	Will be 1.2rem (but never smaller)
+  Medium screens	Will follow 2vw (fluid, scales with viewport width)
+  Large screens	Will max out at 3rem (and won’t get bigger) */
